@@ -1,0 +1,499 @@
+@charset "UTF-8";
+
+/* 全体 */
+body {
+    font-family: "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+    background-color: rgb(248, 248, 248);
+    height: 100%;
+}
+
+.product__main {
+    margin: 65px 0 10px 0;
+    width: auto;
+}
+
+.login__main {
+    margin: 85px 0 10px 0;
+    width: auto;
+}
+
+.contents {
+    box-sizing:border-box;
+    width: auto;
+    overflow: auto;
+    color: #333;
+    padding: 10px;
+    display: block;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.alert-success {
+    width: auto;
+    background-color: rgb(249, 227, 255);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px 0;
+
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+input,
+select,
+button,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: #333;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 0.2rem;
+}
+
+input[type='file'] {
+    cursor: pointer;
+    color: #333;
+    border: 1px solid #b2b5b8;
+}
+
+::file-selector-button {
+    background-color: rgb(209, 213, 219);
+    font-size: 90%;
+    color: #333;
+    cursor: pointer;
+    border: 1px solid #b2b5b8;
+    padding: 0 0.5rem;
+    margin-right: 1rem;
+}
+
+a:hover {
+    outline: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+select:focus-visible,
+.page-link:focus-visible {
+    outline: rgb(83, 83, 255) solid 2px;
+}
+
+/* ヘッダー */
+header {
+    width: 100%;
+    position:fixed;
+    top:0px;
+    left: 0px;
+    z-index: 10;
+    background-color: #013375;
+    color: #333;
+    padding: 5px 10px;
+    box-sizing:border-box;
+}
+
+.header__contents {
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.header__nav--title a {
+    font-size: 1.3rem;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing:border-box;
+    padding: 10px;
+    font-size: .9rem;
+}
+
+header ul {
+    height: 100%;
+    list-style-type: none;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header li {
+    height: 100%;
+    margin: 0 0 0 10px;
+}
+
+.header__nav--login ul {
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+
+.header__nav--login li {
+    height: 40%;
+}
+
+.header__nav--login li:first-of-type {
+    margin-top: 3px;
+    margin-bottom: 5px;
+
+}
+
+.header__nav--login-button {
+    border: 1px solid white;
+    width: 6rem;
+}
+
+.header__nav--login-name a {
+    justify-content: left;
+    overflow: hidden;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #333;
+}
+
+.header__left {
+    width: 120px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__right {
+    width: 150px;
+    height: 100%;
+    background-color: #658bbd;
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* タイトル */
+.contents__title {
+    margin: 15px 0;
+}
+
+
+/* index_データ絞り込み・検索フォーム */
+.search-form {
+    width: 100%;
+}
+
+.default__search {
+    color: #333;
+    outline-offset: 0px;
+    margin: 10px 5px 20px 0px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 0px;
+    width: 15rem;
+}
+
+.default__drp {
+    margin-right: 5px;
+    border-radius: 0px;
+    width: 15rem;
+}
+
+.default__btn {
+    cursor: pointer;
+    appearance: none;
+    font-size: 90%;
+    background: gray;
+    color: white;
+    padding: 3px;
+    margin: 2px;
+    min-width: 4rem;
+    border-radius: 25px;
+}
+
+.default__btn:hover {
+    background: rgb(228, 228, 228);
+    color: #333;
+}
+
+/* 入力エラーメッセージ */
+.info--error p {
+    font-size: 80%;
+    color: red;
+    margin: 0.2rem;
+}
+
+/* 入力必須 */
+.info--required {
+    color: red;
+    margin-left: 0.5rem;
+}
+
+/* index_データ一覧 */
+table {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px 0px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #b2b5b8;
+    word-break: break-all;
+}
+
+th,
+td {
+    border: 1px solid #b2b5b8;
+    padding: 0.5em;
+}
+
+th {
+    background-color: RGB(199 217 241);
+}
+
+.index-table__title--id {
+    width: 5%;
+}
+
+.index-table__title--img {
+    width: 15%;
+}
+
+.index-table__title--product-name {
+    width: 30%;
+}
+
+.index-table__title--price {
+    width: 10%;
+}
+
+.index-table__title--stock {
+    width: 10%;
+}
+
+.index-table__title--company-name {
+    width: 20%;
+}
+
+.index-table__title--btn {
+    padding: 0;
+    width: 6.5rem;
+}
+
+.index-table__contents--height {
+    height: 107px;
+}
+
+.index-table__contents--right {
+    text-align: right;
+}
+
+.index-table__contents--left {
+    text-align: left;
+}
+
+.index-table__contents--center {
+    text-align: center;
+}
+
+.index-table__contents--img {
+    text-align: center;
+    font-size: 70%;
+}
+
+.index-table__contents--btn {
+    padding: 0;
+}
+
+/* index_新規登録画面へ移動ボタン */
+.nav-create__btn {
+    width: 5rem;
+    background: rgb(41, 87, 226);
+}
+
+.nav-create__btn:hover {
+    color: #333;
+    background: rgb(164, 246, 252);
+}
+
+/* index_削除ボタン */
+.index-table__delete-btn {
+    width: 3rem;
+    background: crimson;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
+.index-table__delete-btn:hover {
+    color: #333;
+    background: rgb(255, 189, 230);
+}
+
+/* index_画像 */
+.index-table__img {
+    width: 100%;
+    max-width: 120px;
+    object-fit: contain;
+    aspect-ratio: 4 / 3;
+}
+
+/* show_一覧 */
+.show-table th {
+    text-align: left;
+    vertical-align: top;
+}
+
+.show-table__title--id {
+    width: 150px;
+}
+
+.show-table__img {
+    width: 100%;
+    max-width: 350px;
+    min-height: 150px;
+    object-fit: contain;
+    aspect-ratio: 4 / 3;
+}
+
+/* create_一覧/edit_一覧 */
+.create-table th,
+.create-table td,
+.edit-table th,
+.edit-table td {
+    padding: 0.5rem;
+    text-align: left;
+    vertical-align: top;
+    border: none;
+}
+
+.create-table th,
+.edit-table th {
+    width: 150px;
+    height: 4rem;
+    border-bottom: 1px solid white;
+}
+
+.edit-table .edit-table__title--id th{
+    height: 1rem;
+}
+
+.create-table .create-table__last-row,
+.edit-table .edit-table__last-row {
+    border-bottom: 1px solid #b2b5b8;
+}
+
+.create-table label,
+.edit-table label {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.create-table input,
+.edit-table input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.2rem;
+}
+
+.create-table select,
+.edit-table select {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.create-table textarea,
+.edit-table textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.create__btn {
+    background: rgb(41, 87, 226);
+}
+
+.create__btn:hover {
+    color: #333;
+    background: rgb(164, 246, 252);
+}
+
+/* edit_一覧 */
+.edit__btn {
+    background: rgb(10, 175, 10);
+}
+
+.edit__btn:hover {
+    color: #333;
+    background: rgb(154, 255, 154);
+}
+
+.edit-table__index--now-img {
+    margin-top: 10px;
+    border: 1px solid #b2b5b8;
+    width: 150px;
+}
+
+.edit-table__index--now-img p{
+    margin: 5px;
+}
+
+/* edit_画像 */
+.edit-table__img {
+    width: 100%;
+    align-items: center;
+    object-fit: contain;
+    aspect-ratio: 4 / 3;
+
+}
+
+/* ページング */
+.pagination {
+    list-style-type: none;
+}
+
+.page-item {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #b2b5b8;
+    margin-right: 3px;
+    background-color: white;
+}
+
+.page-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(70, 70, 255);
+}
+
+.active {
+    background-color: rgb(70, 70, 255);
+}
+
+.active span {
+    color: white;
+}
